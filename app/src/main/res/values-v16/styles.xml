@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.NoActionBar.CustomFont">
+        <item name="android:fontFamily">@font/pt_sans</item>
+    </style>
+
+    <style name="NoActionBar" parent="AppTheme.NoActionBar.CustomFont" />
+
+</resources>

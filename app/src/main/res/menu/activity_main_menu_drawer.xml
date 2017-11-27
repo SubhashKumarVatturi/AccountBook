@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navSpendMoneyList"
+            android:checked="true"
+            android:icon="@drawable/ic_view_list"
+            android:title="@string/money_spent" />
+
+        <item
+            android:id="@+id/navAddMoney"
+            android:icon="@drawable/ic_add"
+            android:title="@string/add_money" />
+
+        <item
+            android:id="@+id/navPersonInfo"
+            android:icon="@drawable/ic_person"
+            android:title="@string/person_info" />
+
+        <item
+            android:id="@+id/navAddPerson"
+            android:icon="@drawable/ic_add_person"
+            android:title="@string/add_person" />
+
+        <item
+            android:id="@+id/navManage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/manage_book" />
+
+    </group>
+
+</menu>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="day_modes">
+        <item>MG</item>
+        <item>AF</item>
+        <item>NG</item>
+    </string-array>
+</resources>
