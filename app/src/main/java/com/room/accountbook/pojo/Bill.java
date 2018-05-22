@@ -6,6 +6,16 @@ package com.room.accountbook.pojo;
 
 public class Bill {
     private String sponsorName;
+    private String spendFor;
+
+    public String getSpendFor() {
+        return spendFor;
+    }
+
+    public void setSpendFor(String spendFor) {
+        this.spendFor = spendFor;
+    }
+
     private String moneySpend;
     private String consumers;
     private String date;

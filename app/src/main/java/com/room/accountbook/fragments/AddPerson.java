@@ -53,7 +53,7 @@ public class AddPerson extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setTitle( getString(R.string.add_person));
+        setTitle(getString(R.string.add_person));
     }
 
     @Override
@@ -139,7 +139,8 @@ public class AddPerson extends BaseFragment {
             vNumber.setError(getString(R.string.enter_mobile_no));
             return false;
         } else if (etMobileNo.getText().length() != 10 ||
-                !(etMobileNo.getText().toString().trim().startsWith("7") ||
+                !(etMobileNo.getText().toString().trim().startsWith("6") ||
+                        etMobileNo.getText().toString().trim().startsWith("7") ||
                         etMobileNo.getText().toString().trim().startsWith("8") ||
                         etMobileNo.getText().toString().trim().startsWith("9"))) {
             vNumber.setError(getString(R.string.enter_valid_no));

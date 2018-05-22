@@ -37,7 +37,7 @@ public class MoneySpendListAdapter extends RecyclerView.Adapter<MoneySpendListAd
         holder.tvMoney.setText(bill.getMoneySpend());
         holder.tvSponsorName.setText(bill.getSponsorName());
         holder.tvMoney.setText(String.format("%s ₹", bill.getMoneySpend()));
-        holder.tvDate.setText(String.format("%s %s", bill.getDate(), bill.getTime()));
+        holder.tvDate.setText(String.format("On %s %s, spend for %s", bill.getDate(), bill.getTime(), bill.getSpendFor()));
         holder.vConsumers.setText(bill.getConsumers());
     }
 

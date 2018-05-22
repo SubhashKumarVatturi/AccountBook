@@ -47,6 +47,7 @@ public class AddMoney extends BaseFragment implements View.OnClickListener {
     private View parent;
     private EditText etMoney;
     private Spinner spTime;
+    private EditText etSpendFor;
 
     public AddMoney() {
         // Required empty public constructor
@@ -123,6 +124,7 @@ public class AddMoney extends BaseFragment implements View.OnClickListener {
     }
 
     private void findValues(View view) {
+        etSpendFor = view.findViewById(R.id.etSpendFor);
         etMoney = view.findViewById(R.id.etMoney);
         bvSave = view.findViewById(R.id.bvSave);
         etDate = view.findViewById(R.id.etDate);
@@ -161,7 +163,8 @@ public class AddMoney extends BaseFragment implements View.OnClickListener {
         ContentValues values = new ContentValues();
         values.put(DbManager.AddMoney.SPONSOR_ID, personIds.get(spSponsar.getSelectedItemPosition() - 1));
         values.put(DbManager.AddMoney.MONEY_SPEND, getDouble(etMoney.getText().toString()));
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+        values.put(DbManager.AddMoney.SPEND_FOR, etSpendFor.getText().toString().trim());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
         String date = sdf.format(myCalendar.getTime());
         values.put(DbManager.AddMoney.DATE, date);
         values.put(DbManager.AddMoney.TIME, spTime.getSelectedItem().toString());
@@ -241,6 +244,9 @@ public class AddMoney extends BaseFragment implements View.OnClickListener {
             return false;
         } else if (TextUtils.isEmpty(etDate.getText())) {
             Helper.ting(parent, getString(R.string.select_date));
+            return false;
+        } else if (TextUtils.isEmpty(etSpendFor.getText())) {
+            Helper.ting(parent, getString(R.string.enter_spend_for));
             return false;
         } else if (!isAnyPersonSelected()) {
             Helper.ting(parent, getString(R.string.select_consumed_person));

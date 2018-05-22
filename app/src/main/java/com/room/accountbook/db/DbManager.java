@@ -47,15 +47,17 @@ public class DbManager extends SQLiteOpenHelper {
         String TABLE_NAME = "AddMoney";
         String ID = "id";
         String TIME = "time";
-        String DATE = "date";
+        String DATE = "spent_date";
         String SPONSOR_ID = "sponsor_id";
         String MONEY_SPEND = "money_spend";
+        String SPEND_FOR = "spend_for";
 
         String CREATE = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID + " INTEGER PRIMARY KEY,"
                 + SPONSOR_ID + " TEXT NOT NULL DEFAULT '',"
                 + MONEY_SPEND + " FLOAT NOT NULL DEFAULT '0',"
                 + TIME + " TEXT NOT NULL DEFAULT '',"
+                + SPEND_FOR + " TEXT NOT NULL DEFAULT '',"
                 + DATE + " Date);";
     }
 

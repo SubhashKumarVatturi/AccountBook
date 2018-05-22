@@ -16,8 +16,13 @@ import com.room.accountbook.adapters.MoneySpendListAdapter;
 import com.room.accountbook.db.DbManager;
 import com.room.accountbook.pojo.Bill;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -107,13 +112,15 @@ public class MoneySpentList extends BaseFragment {
             while (cursor.moveToNext()) {
                 Bill bill = new Bill();
                 bill.setId(cursor.getString(cursor.getColumnIndex(DbManager.AddMoney.ID)));
+                bill.setSpendFor(cursor.getString(cursor.getColumnIndex(DbManager.AddMoney.SPEND_FOR)));
                 bill.setTime(cursor.getString(cursor.getColumnIndex(DbManager.AddMoney.TIME)));
-                bill.setDate(cursor.getString(cursor.getColumnIndex(DbManager.AddMoney.DATE)));
+                String date = cursor.getString(cursor.getColumnIndex(DbManager.AddMoney.DATE));
+                bill.setDate(getFormattedDate(date));
                 bill.setSponsorName(names.get(cursor.getString(cursor.getColumnIndex(DbManager.AddMoney.SPONSOR_ID))));
                 bill.setMoneySpend(cursor.getString(cursor.getColumnIndex(DbManager.AddMoney.MONEY_SPEND)));
                 double value;
                 StringBuilder builder = new StringBuilder();
-                for (int i = 5; i < columnNames.length; i++) {
+                for (int i = 6; i < columnNames.length; i++) {
                     value = cursor.getDouble(cursor.getColumnIndex(columnNames[i]));
                     if (value > 0) {
                         builder.append(names.get(columnNames[i].substring(1)));
@@ -136,5 +143,17 @@ public class MoneySpentList extends BaseFragment {
         if (bills.size() > 0) {
             vNoData.setVisibility(View.GONE);
         }
+    }
+
+    private String getFormattedDate(String actualDate) {
+        DateFormat originalFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+        DateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = null;
+        try {
+            date = originalFormat.parse(actualDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return targetFormat.format(date);
     }
 }

@@ -42,4 +42,7 @@
     <string name="clear_spend_data">Clear Spend Data</string>
     <string name="want_to_delete">Are you sure want to delete %s</string>
     <string name="person_delete_success">%s successfully deleted</string>
+    <string name="spend_for">Spend For</string>
+    <string name="enter_spend_for">Enter reason to spend for</string>
+    <string name="version">Version 1.1</string>
 </resources>

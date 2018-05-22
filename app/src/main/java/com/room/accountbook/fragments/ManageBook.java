@@ -207,6 +207,7 @@ public class ManageBook extends BaseFragment implements View.OnClickListener {
                 + DbManager.AddMoney.SPONSOR_ID + ","
                 + DbManager.AddMoney.MONEY_SPEND + ","
                 + DbManager.AddMoney.TIME + ","
+                + DbManager.AddMoney.SPEND_FOR + ","
                 + DbManager.AddMoney.DATE);
         for (int p = 0; p < personIds.size(); p++) {
             if (p != spPersons.getSelectedItemPosition() - 1) {
@@ -227,6 +228,7 @@ public class ManageBook extends BaseFragment implements View.OnClickListener {
         backupTableQuery.append(backupTable + " ("
                 + DbManager.AddMoney.ID + " INTEGER PRIMARY KEY,"
                 + DbManager.AddMoney.SPONSOR_ID + " TEXT NOT NULL DEFAULT '',"
+                + DbManager.AddMoney.SPEND_FOR + " TEXT NOT NULL DEFAULT '',"
                 + DbManager.AddMoney.MONEY_SPEND + " FLOAT NOT NULL DEFAULT '0',"
                 + DbManager.AddMoney.TIME + " TEXT NOT NULL DEFAULT '',"
                 + DbManager.AddMoney.DATE + " Date");

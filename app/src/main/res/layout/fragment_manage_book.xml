@@ -9,6 +9,15 @@
         android:layout_gravity="bottom|right"
         android:src="@drawable/img_navigation_premium" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="@string/version"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

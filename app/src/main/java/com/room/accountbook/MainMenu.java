@@ -142,8 +142,6 @@ public class MainMenu extends AppCompatActivity
                 .beginTransaction()
                 .replace(R.id.container, fragment, tag)
                 .commit();
-
-//        tvTitle.setText(title);
     }
 
     @Override
