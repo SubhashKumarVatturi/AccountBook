@@ -1,4 +1,4 @@
-# AccountBook
+# Account Book
 Account Book project is about to manage money sponsored by group of people, and to calculate money flow within the people.
 
 - Add Persons
