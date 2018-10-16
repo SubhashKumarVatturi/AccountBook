@@ -38,8 +38,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/padding5"
-                    android:paddingTop="@dimen/padding5">
+                    android:paddingTop="@dimen/padding5"
+                    android:paddingBottom="@dimen/padding5">
 
                     <ImageButton
                         android:id="@+id/bvClear"
@@ -76,9 +76,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingBottom="@dimen/activity_horizontal_margin"
                     android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingTop="@dimen/activity_horizontal_margin">
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_horizontal_margin">
 
                     <TextView
                         android:id="@+id/tvDelete"
@@ -91,8 +91,8 @@
                         android:id="@+id/bvDeletePerson"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
                         android:background="?selectableItemBackgroundBorderless"
                         android:padding="@dimen/activity_horizontal_margin"
                         android:src="@drawable/ic_delete" />
@@ -103,9 +103,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tvDelete"
-                        android:layout_marginRight="@dimen/activity_horizontal_margin"
                         android:layout_marginTop="@dimen/padding5"
-                        android:layout_toLeftOf="@id/bvDeletePerson" />
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_toLeftOf="@id/bvDeletePerson"
+                        android:spinnerMode="dialog" />
 
 
                 </RelativeLayout>

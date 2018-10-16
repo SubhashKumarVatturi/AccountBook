@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -56,7 +57,7 @@ public class AddMoney extends BaseFragment implements View.OnClickListener {
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
-     *
+     *vPersonList
      * @return A new instance of fragment MoneySpentList.
      */
     public static AddMoney newInstance() {
@@ -118,6 +119,7 @@ public class AddMoney extends BaseFragment implements View.OnClickListener {
             CheckBox checkBox = new CheckBox(activity);
             checkBox.setText(persons.get(i));
             checkBox.setLayoutParams(params);
+            checkBox.setTextColor(Color.BLACK);
             vPersonList.addView(checkBox);
         }
 

@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingBottom="@dimen/padding8"
-    android:paddingTop="@dimen/padding8">
+    android:paddingTop="@dimen/padding8"
+    android:paddingBottom="@dimen/padding8">
 
     <TextView
         android:id="@+id/tvConsumer"
@@ -17,17 +17,19 @@
         android:id="@+id/tvMoneyIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
+        android:layout_weight="0.5"
         android:gravity="left"
-        android:textColor="@color/colorText" />
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvMoneyOut"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/padding5"
-        android:layout_weight="0.3"
+        android:layout_weight="0.5"
         android:gravity="left"
-        android:textColor="@color/colorText" />
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark" />
 
 </LinearLayout>

@@ -120,6 +120,7 @@ public class PersonInfo extends BaseFragment implements AdapterView.OnItemSelect
         rvConsumersList = view.findViewById(R.id.rvConsumersList);
         LinearLayoutManager manager = new LinearLayoutManager(activity);
         rvConsumersList.setLayoutManager(manager);
+        rvConsumersList.setNestedScrollingEnabled(false);
         rvConsumersList.setAdapter(adapter);
     }
 

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
 
@@ -20,7 +21,7 @@
         android:background="@drawable/img_store_gopremium_right2"
         android:visibility="gone" />
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -28,8 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_margin="32dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/padding32">
 
             <TextView
                 style="@style/Base.TextAppearance.AppCompat.Title"
@@ -45,7 +46,8 @@
                 style="@style/Base.Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding10" />
+                android:layout_marginTop="@dimen/padding10"
+                android:spinnerMode="dialog" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -69,7 +71,7 @@
                         android:hint="@string/money_spend"
                         android:imeOptions="actionDone"
                         android:inputType="number"
-                        android:maxLength="4"
+                        android:maxLength="6"
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
 
@@ -77,7 +79,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/padding10"
-                    android:layout_weight="1">
+                    android:layout_weight="0.8">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/etDate"
@@ -97,11 +99,13 @@
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/spTime"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:layout_marginTop="@dimen/padding10"
-                    android:entries="@array/day_modes" />
+                    android:background="@drawable/elivated_bg"
+                    android:entries="@array/day_modes"
+                    android:padding="@dimen/padding5" />
 
             </LinearLayout>
 
@@ -124,15 +128,14 @@
                 android:id="@+id/vPersonList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/padding32"
-                android:layout_marginRight="@dimen/padding32"
-                android:layout_marginTop="@dimen/padding32"
-                android:orientation="vertical" />
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding32" />
 
 
         </LinearLayout>
 
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/bvSave"

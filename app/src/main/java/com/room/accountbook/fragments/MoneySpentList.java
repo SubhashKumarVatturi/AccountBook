@@ -94,7 +94,7 @@ public class MoneySpentList extends BaseFragment {
         SQLiteDatabase db = DbManager.getInstance(activity).getReadableDatabase();
         Cursor cursor = db.query(DbManager.AddMoney.TABLE_NAME,
                 null, null, null, null,
-                null, DbManager.AddMoney.DATE + " DESC");
+                null, DbManager.AddMoney.DATE + " DESC," + DbManager.AddMoney.ID + " DESC");
         Cursor personsList = db.query(DbManager.Person.TABLE_NAME,
                 new String[]{DbManager.Person.ID, DbManager.Person.NAME}, null,
                 null, null, null, DbManager.Person.NAME);

@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <ImageView
@@ -19,7 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/padding32"
+            android:padding="@dimen/padding32"
             android:orientation="vertical">
 
             <ImageView
@@ -30,6 +31,7 @@
                 android:src="@drawable/icon_persons" />
 
             <Spinner
+                android:spinnerMode="dialog"
                 android:id="@+id/spPersons"
                 style="@style/Base.Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
@@ -104,31 +106,35 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/pt_sans_caption"
                     android:text="Person Name"
-                    android:textColor="@color/colorAccent" />
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark" />
 
                 <TextView
                     android:id="@+id/tvMoneyIn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:fontFamily="@font/pt_sans_caption"
                     android:gravity="left"
+                    android:textStyle="bold"
                     android:text="In"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/colorPrimaryDark" />
 
                 <TextView
                     android:id="@+id/tvMoneyOut"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/padding5"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:fontFamily="@font/pt_sans_caption"
                     android:gravity="left"
+                    android:textStyle="bold"
                     android:text="Out"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/colorPrimaryDark" />
             </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
+                android:background="@android:color/white"
                 android:id="@+id/rvConsumersList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
