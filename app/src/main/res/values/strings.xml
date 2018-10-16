@@ -45,4 +45,6 @@
     <string name="spend_for">Spend For</string>
     <string name="enter_spend_for">Enter reason to spend for</string>
     <string name="version">Version 1.1</string>
+    <string name="sure_want_to_remove_record">Are you sure want to remove record ?</string>
+    <string name="record_deleted_success">Record deleted successfully</string>
 </resources>

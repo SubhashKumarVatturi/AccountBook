@@ -83,7 +83,7 @@ public class MoneySpentList extends BaseFragment {
         rvSpendList = activity.findViewById(R.id.rvSpendList);
         LinearLayoutManager manager = new LinearLayoutManager(activity);
         rvSpendList.setLayoutManager(manager);
-        adapter = new MoneySpendListAdapter(activity, bills);
+        adapter = new MoneySpendListAdapter(this, bills);
         rvSpendList.setAdapter(adapter);
 
         loadBills();
@@ -155,5 +155,9 @@ public class MoneySpentList extends BaseFragment {
             e.printStackTrace();
         }
         return targetFormat.format(date);
+    }
+
+    public void onAllItemsRemoved() {
+        vNoData.setVisibility(View.VISIBLE);
     }
 }
